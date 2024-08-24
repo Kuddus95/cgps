@@ -1,0 +1,421 @@
+<!DOCTYPE">
+  <html>
+    <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>Chakinia GPS</title>
+      <link rel="stylesheet" type="text/css" href="css/style.css" />
+	  <link rel="stylesheet" type="text/css" href="css/stylecl.css" />
+      <script type="text/javascript" src="jquery/jquery-1.7.1.min.js"></script>
+      <script type="text/javascript" src="jquery/jquery-ui.js"></script>
+      <script type="text/javascript" src="jquery/jquery.nicescroll.js"></script>
+	  <link rel="icon" type="image/png" href="logo/MainLogo.png">
+    </head>
+
+    <body>
+      <center>
+        <div class="main">
+          <div class="head_section dontPrint">
+            <div class="ins_name">
+              <img id="ins_logo" src="logo/MainLogo.png" style="height:120px; width:120px; float:left; position:relative;" />
+              <img id="ins_logo" src="logo/banner.jpg" class="rborder" style="height:auto; width:auto; float:right;" />
+              <div>
+                 চাকিনীয়া সরকারি প্রাথমিক বিদ্যালয় <br>
+                <span style="font-size:20px;">৫ নং ভাবকী, খানসামা, দিনাজপুর। <br> স্থাপিত: ১৯৮৫ খ্রিস্টাব্দ।</span>
+              </div>
+            </div>
+          </div>
+          <div class="dontPrint">
+            <ul id="nav">
+              <li><a href="index.html" style="color: white; font-size: 24px;">⟰</a></li>
+                  <li><a href="#">শিক্ষার্থী বিষয়ক</a>
+                    <ul>
+                      <li><a href="#">উপবৃত্তি >></a>
+						<ul>
+                          <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/upobritti/stipend_2022.txt')">জানুয়ারি-জুন/২০২৪</a></li>
+                          <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/upobritti/stipend_2023.txt')">জুলাই-ডিসেম্বর/২০২৪</a></li>
+						  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/upobritti/stipend_2024.txt')">২০২৩ সালের তালিকা</a></li>
+                        </ul>
+                      </li>
+					  
+             <li><a href="#">মূল্যায়ন >></a>
+                <ul>
+                  <li><a href="#">১ম প্রান্তিক মূল্যায়ন >></a>
+                    <ul>
+                      <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/mullayon/1st_term/exam_ruteen.txt')">প্রথম শ্রেণি</a></li>
+					  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/mullayon/1st_term/exam_duty.txt')">দ্বিতীয় শ্রেণি</a></li>
+					  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/mullayon/1st_term/absent.txt')">তৃতীয় শ্রেণি</a></li>
+					  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/mullayon/1st_term/class-4.pdf')">চতুর্থ শ্রেণি</a></li>
+					  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/mullayon/1st_term/class-5.pdf')">পঞ্চম শ্রেণি</a></li>
+                    </ul>
+				 </li>
+				<li><a href="#">২য় প্রান্তিক মূল্যায়ন >></a>
+                    <ul>
+                     <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/mullayon/2nd_term/exam_ruteen.txt')">প্রথম শ্রেণি</a></li>
+					  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/mullayon/2nd_term/exam_duty.txt')">দ্বিতীয় শ্রেণি</a></li>
+					  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/mullayon/2nd_term/absent.txt')">তৃতীয় শ্রেণি</a></li>
+					  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/mullayon/2nd_term/result.txt')">চতুর্থ শ্রেণি</a></li>
+					  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/mullayon/2nd_term/result.txt')"> পঞ্চম শ্রেণি</a></li>
+                    </ul>
+				 </li>
+				<li><a href="#">৩য় প্রান্তিক মূল্যায়ন >></a>
+                    <ul>
+                     <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/mullayon/3rd_term/exam_ruteen.txt')">প্রথম শ্রেণি</a></li>
+					  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/mullayon/3rd_term/exam_duty.txt')"> দ্বিতীয় শ্রেণি</a></li>
+					  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/mullayon/3rd_term/absent.txt')"> তৃতীয় শ্রেণি</a></li>
+					  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/mullayon/3rd_term/result.txt')"> চতুর্থ শ্রেণি</a></li>
+					  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/mullayon/3rd_term/result.txt')"> পঞ্চম শ্রেণি</a></li>
+                    </ul>
+				</li>
+                      <li><a href="#">বার্ষিক ফলাফল, ২০২৩ >></a>
+						<ul>
+                          <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/mullayon/result_register/class_1.txt')">প্রথম শ্রেণি</a></li>
+                          <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/mullayon/result_register/class_2.txt')">দ্বিতীয় শ্রেণি</a></li>
+                          <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/mullayon/result_register/class_3.txt')">তৃতীয় শ্রেণি</a></li>
+                          <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/mullayon/result_register/class_4.txt')">চতুর্থ শ্রেণি</a></li>
+                          <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/mullayon/result_register/class_5.txt')">পঞ্চম শ্রেণি</a></li>
+                        </ul>
+                      </li>
+                </ul>
+              </li>
+                      <li><a href="#">শিক্ষার্থী পরিসংখ্যান >></a>
+						<ul>
+						  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/studentsinfo/student.html')">শিক্ষার্থী তথ্য</a></li>
+						  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/studentsinfo/student_regi.txt')">শিক্ষার্থী রেজিস্টার</a></li>
+						  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/studentsinfo/admission.html')">ভর্তি ২০২৪</a></li>
+						  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/studentsinfo/drop.html')">ঝরে পড়া শিক্ষার্থী</a></li>
+						  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/studentsinfo/absent.html')">দীর্ঘ দিন অনুপস্থিত শিক্ষার্থী</a></li>
+						  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/studentsinfo/otistic.html')">প্রতিবন্ধী শিক্ষার্থী</a></li>
+						  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/studentsinfo/reapeted.html')">পূণঃরাবৃত্তি</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/boi_bitoron.txt')">বই বিতরণ</a></li>
+					  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/sisu_jorip.html')">শিশু জরিপ</a></li>
+                      <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/students/reading_test.pdf')">পঠন দক্ষতা ফর্ম</a></li>
+                </ul>
+                  </li>
+                  <li><a href="#">শিক্ষক বিষয়ক</a>
+                    <ul>
+                      <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/teachers/atinfo.html')">শিক্ষক তথ্য</a></li>
+                      <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/teachers/home_visit.pdf')">হোমভিজিট</a></li>
+                      <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/teachers/casual_leave.txt')">নৈমিত্তিক ছুটি</a></li>
+                      <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/teachers/training.txt')">প্রশিক্ষণ</a></li>
+                      <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/teachers/duty.txt')">দায়িত্ব বন্টন</a></li>
+                      <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/teachers/academic.txt')">একাডেমিক সুপারভিশন</a></li>
+                      <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/teachers/lesson_plan.txt')">পাঠ পরিকল্পনা</a></li>
+                      <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/teachers/lesson_study.txt')">লেসন স্টাডি</a></li>
+					  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/teachers/Acr.pdf')">শিক্ষকদের এসিআর</a></li>
+					  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/teachers/SalaryScale.pdf')">শিক্ষকদের বেতন স্কেল</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">প্রাতিষ্ঠানিক</a>
+                    <ul>
+				  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/institution/register.txt')">রেজিস্টার </a></li>
+				  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/institution/return.pdf')">মাসিক রিটার্ন</a></li>
+				  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/institution/apa.txt')">এপিএ </a></li>
+                  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/institution/annual_plan.txt')">বার্ষিক কর্মপরিকল্পনা</a></li>
+                  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/institution/class_ruteen.pdf')">শ্রেণি রুটিন</a></li>
+                  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/institution/sports.pdf')">আন্তঃক্রিড়া</a></li>
+                  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/institution/acr_head.pdf')">এসিআর</a></li>
+                  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/institution/electricity.txt')">বিদ্যুৎ বিল</a></li>
+				  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/institution/suti_2024.jpg')">ছুটির তালিকা ২০২৪</a></li>
+                    </ul>
+                  </li>
+              <li><a href="#">কমিটি</a>
+                    <ul>
+                      <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/comitee/smc.html')">ম্যানেজিং কমিটি</a></li>
+                      <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/comitee/pta.html')">পিটিএ</a></li>
+                      <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/comitee/slip.html')">SLIP কমিটি</a></li>
+					  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/comitee/sac.html')">SAC কমিটি</a></li>
+                      <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/comitee/st-council.html')">স্টুডেন্ট কাউন্সিল</a></li>
+                      <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/comitee/doctor.html')">ক্ষুদে ডাক্তার টিম</a></li>
+                      <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/comitee/cub.html')">কাবদল</a></li>
+                    </ul>
+              </li>
+               <li>
+                <a href="#">টেক্সটবই/সংস্করণ</a>
+				 <ul>
+                  <li>
+				  <a href="#">টেক্সটবই >></a>
+                    <ul>
+					<li><a class="custom-link" href="#" onclick="loadHTML('Navbar/textbook/text_book/class_1.html')">প্রথম</a></li>
+                    <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/textbook/text_book/class_2.html')">দ্বিতীয়</a></li>
+					<li><a class="custom-link" href="#" onclick="loadHTML('Navbar/textbook/text_book/class_3.html')">তৃতীয়</a></li>
+					<li><a class="custom-link" href="#" onclick="loadHTML('Navbar/textbook/text_book/class_4.html')">চতুর্থ</a></li>
+					<li><a class="custom-link" href="#" onclick="loadHTML('Navbar/textbook/text_book/class_5.html')">পঞ্চম</a></li>
+                     </ul>
+                  </li>
+
+                <li>
+                 <a href="#">টিজি >></a>
+				 <ul>
+					<li><a class="custom-link" href="#" onclick="loadHTML('Navbar/textbook/tg/class_1.html')">প্রথম</a></li>
+                    <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/textbook/tg/class_2.html')">দ্বিতীয়</a></li>
+					<li><a class="custom-link" href="#" onclick="loadHTML('Navbar/textbook/tg/class_3.html')">তৃতীয়</a></li>
+					<li><a class="custom-link" href="#" onclick="loadHTML('Navbar/textbook/tg/class_4.html')">চতুর্থ</a></li>
+					<li><a class="custom-link" href="#" onclick="loadHTML('Navbar/textbook/tg/class_5.html')">পঞ্চম</a></li>
+                  </ul>
+                </li>					  
+              <li><a href="#">প্রাক-প্রাথমিক >></a>
+                <ul>
+                  <li><a class="custom-link" href="#" onclick="loadHTML('PrePrimary/PrePrimaryRoutineLessonplan2024.pdf')">দৈনিক পাঠপরিকল্পনা</a></li>
+                  <li><a class="custom-link" href="#" onclick="loadHTML('PrePrimary/PP_MonitoringForm.pdf')">পরিদর্শন ফর্ম</a></li>
+                  <li><a class="custom-link" href="#" onclick="loadHTML('PrePrimary/PP_Teachrer_Guide.pdf')">শিক্ষক সহায়িকা</a></li>
+                </ul>
+              </li>
+					</ul>
+				</li>			  
+              <li>
+                <a href="#">পাঠপরিকল্পনা</a>
+                <ul>
+                  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/LessonPlan/Class-1.pdf')">প্রথম</a></li>
+                  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/LessonPlan/Class-2.pdf')">দ্বিতীয়</a></li>
+                  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/LessonPlan/Class-3.pdf')">তৃতীয়</a></li>
+                  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/LessonPlan/Class-4.pdf')">চতুর্থ</a></li>
+                  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/LessonPlan/Class-5.pdf')">পঞ্চম</a></li>
+                  <li><a href="#">বিজ্ঞান >></a>
+                    <ul>
+                      <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/LessonPlan/Science/ScienceClass1.pdf')">প্রথম</a></li>
+                      <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/LessonPlan/Science/ScienceClass2.pdf')">দ্বিতীয়</a></li>
+                      <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/LessonPlan/Science/ScienceClass3.pdf')">তৃতীয়</a></li>
+                      <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/LessonPlan/Science/ScienceClass4.pdf')">চতুর্থ</a></li>
+                      <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/LessonPlan/Science/ScienceClass5.pdf')">পঞ্চম</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">৫ম শ্রেণির সমাপনী</a>
+                <ul>
+				  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/somaponi/somaponi.html')">এক নজরে সমাপনী</a></li>
+                  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/somaponi/britti.html')">প্রাথমিক বৃত্তি</a></li>
+				  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/somaponi/a_pluss.html')"> A+ প্রাপ্তির তথ্য </a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#">কাবদল</a>
+                <ul>
+                  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/cub/boys.txt')">বালক</a></li>
+				  <li><a class="custom-link" href="#" onclick="loadHTML('Navbar/cub/girls.txt')">বালিকা</a></li>
+                </ul>
+              </li>
+			  
+              <li>
+                <a href="#">টুলস</a>
+                <ul>
+                  <li><a class="custom-link" href="#" onclick="loadHTML('Tools/basic-calculator/Calculator.html')">ক্যালকুলেটর</a></li>
+				  <li><a class="custom-link" href="#" onclick="loadHTML('Tools/Age-calculator/age-calculator.html')">বয়স ক্যালকুলেটর</a></li>
+                  <li><a class="custom-link" href="#" onclick="loadHTML('Tools/bmi-calculator/BmiCalculator.html')">বিএমআই ক্যালকুলেটর</a></li>
+				  <li><a class="custom-link" href="#" onclick="loadHTML('Tools/english-dictionary/EnglishDictionary.html')">ইংরেজি ডিকশেনারি</a></li>
+				  <li><a class="custom-link" href="#" onclick="loadHTML('Tools/countdown-timer/CountDown.html')">কাউন্ট ডাউন</a></li>
+				  <li><a class="custom-link" href="#" onclick="loadHTML('Tools/stopwatch/Stopwatch.html')">স্টপ ওয়াচ</a></li>
+				  <li><a class="custom-link" href="#" onclick="loadHTML('Tools/QR Code Generator/QRcodeMaker.html')">QR কোড তৈরি</a></li>
+				  <li><a class="custom-link" href="#" onclick="loadHTML('Tools/Calculator_Scientific/CalcScei.html')">সায়েন্টিফিক ক্যালকুলেটর</a></li>
+				 				  <li><a class="custom-link" href="#" onclick="loadHTML('Tools/ScrollingText/LEDScroll.html')">স্ক্রলিং টেক্সট</a></li>
+                </ul>
+              </li>
+			  
+              <li>
+                <a href="#">চাইল্ড টুলস</a>
+                <ul>
+                  <li><a class="custom-link" href="#" onclick="loadHTML('Tools/Mandala/index.html')">মান্ডালা অংকন</a></li>
+
+                </ul>
+              </li>			  
+              
+              <li>
+                <a class="custom-link" href="#" onclick="loadHTML('Navbar/login/login.html')">লগিন</a>
+              </li>			  
+        </ul>
+              <div style="clear:both"></div>
+            <div class="news_section  dontPrint">
+              <div class="news_head">বিশেষ ঘোষণা >></div>
+              <div class="news_text">
+                <marquee behavior="scroll" direction="left" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();"> চাকিনীয়া সরকারি প্রাথমিক বিদ্যালয়ের ওয়েব পেজে আপনাকে স্বাগতম। বিদ্যালয় সম্পর্কিত তথ্য পেতে নিয়মিত ভিজিট করুন। </marquee>
+              </div>
+              <div class="c_b"></div>
+            </div>
+          </div>
+          <div class="body_section">
+           <div class="body_left">
+              <div class="download  dontPrint" id="download">
+				<script type="text/javascript">
+					$(document).ready(function() {
+					$("#download1").niceScroll({
+					cursorwidth: "6px",
+					cursorcolor: "#FFF",
+					autohidemode: "false"
+					});
+					});
+				</script>
+				
+		
+                <div class="download_head" style="width:190px;">জরুরি তথ্যসমূহ</div>
+                <div id="download1" style="height:375px; width:220px; overflow:scroll;  text-align:center; text-transform:capitalize; white-space:nowrap; ">
+                  <ul>
+                    <li><a style="font-size:14px; font-weight: normal;" href="#" onclick="loadHTML('sidebar/school-info.html')"> এক নজরে বিদ্যালয়ের তথ্য</a></li>
+                    <li><a style="font-size:14px; font-weight: normal;" href="#" onclick="loadHTML('sidebar/emonitoring.pdf')">ইমনিটরিং টুল</a></li>
+                    <li><a style="font-size:14px; font-weight: normal;" href="#" onclick="loadHTML('sidebar/atinfo.html')">শিক্ষকের তথ্য</a></li>
+                    <li><a style="font-size:14px; font-weight: normal;" href="#" onclick="loadHTML('sidebar/student.html')">শিক্ষার্থী তথ্য</a></li>
+					<li><a style="font-size:14px; font-weight: normal;" href="#" onclick="loadHTML('sidebar/examinfo.html')">সমাপনীর তথ্য</a></li>
+                    <li><a style="font-size:14px; font-weight: normal;" href="#" onclick="loadHTML('sidebar/inspection.html')">পরিদর্শন তথ্য</a></li>
+					<li><a style="font-size:14px; font-weight: normal;" href="#" onclick="loadHTML('sidebar/ruteen.pdf')">শ্রেণি রুটিন</a></li>
+					<li><a style="font-size:14px; font-weight: normal;" href="#" onclick="loadHTML('sidebar/examruteen.html')">পরীক্ষা রুটিন</a></li>
+					<li><a style="font-size:14px; font-weight: normal;" href="#" onclick="loadHTML('sidebar/Land_info.html')">ভূমির তথ্য</a></li>
+					<li><a style="font-size:14px; font-weight: normal;" href="#" onclick="loadHTML('sidebar/Room_info.html')">ভবনের তথ্য</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="link  dontPrint" id="id">
+                <script type="text/javascript">
+                  $(document).ready(function() {
+                    $("#link1").niceScroll({
+                      cursorwidth: "6px",
+                      cursorcolor: "#FFF",
+                      autohidemode: "false"
+                    });
+                  });
+                </script>
+                <div class="link_head">গ্যালারি </div>
+                <div id="link1" style="height:200px; width:220px; overflow:scroll;  text-align:center; text-transform:capitalize; ; white-space:nowrap;">
+                  <div>
+                    <ul>
+                      <li><a style="font-size:14px; font-weight: normal;" href="#" onclick="loadHTML('Audio/AudioPlay.html')">অডিও</a></li>
+                      <li><a style="font-size:14px; font-weight: normal;" href="#" onclick="loadHTML('Video/VideoPlay.html')">ভিডিও</a></li>
+					  <li><a style="font-size:14px; font-weight: normal;" href="#" onclick="loadHTML('Image/slide.html')">ইমেজ</a></li>
+					  <li><a style="font-size:14px; font-weight: normal;" href="#" onclick="loadHTML('Tools/QuizModule/quiz.html')">কুইজ</a></li>
+					  <li><a style="font-size:14px; font-weight: normal;" href="#" onclick="loadHTML('Tools/Drawing_Tool/Drawing.html')">অংকন</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+
+                <script type="text/javascript">
+                  $(document).ready(function() {
+                    $("#link2").niceScroll({
+                      cursorwidth: "6px",
+                      cursorcolor: "#FFF",
+                      autohidemode: "false"
+                    });
+                  });
+                </script>				
+                <div class="link_head"> প্রয়োজনীয় লিংক </div>
+                <div id="link2" style="height:225px; width:200px; overflow:scroll;  text-align:center; text-transform:capitalize; ; white-space:nowrap;">
+                  <div>
+                    <ul>
+                      <li><a style="font-size:14px; font-weight: normal;" href="https://login.ipemis.dpe.gov.bd/login" target="_blank">IPEMIS</a></li>
+                      <li><a style="font-size:14px; font-weight: normal;" href="https://crvs.dpe.gov.bd/" target="_blank">ইউনিক আইডি</a></li>
+					  <li><a style="font-size:14px; font-weight: normal;" href="https://pesp.finance.gov.bd/pesp/login" target="_blank">উপবৃত্তি</a></li>
+					  <li><a style="font-size:14px; font-weight: normal;" href="https://www.teachers.gov.bd/" target="_blank">শিক্ষক বাতায়ন</a></li>
+					  <li><a style="font-size:14px; font-weight: normal;" href="https://muktopaath.gov.bd/" target="_blank">মুক্তপাঠ</a></li>
+					  <li><a style="font-size:14px; font-weight: normal;" href="https://www.dpe.gov.bd/" target="_blank">ডিপিই</a></li>
+                    </ul>
+                  </div>
+                </div>
+				
+				
+              </div>
+            </div>
+            <div class="body_right">
+              <!-- To load htm file by clicking on link -->
+              <script>
+                function loadHTML(url) {
+                  // Hide the default text
+                  document.getElementById('default-text').style.display = 'none';
+                  // Show the iframe and load the specified URL
+                  var iframe = document.getElementById('content-frame');
+                  iframe.style.display = 'block';
+                  iframe.src = url;
+                  return false; // Prevent default link behavior
+                }
+              </script>
+              <!-- To load default htm file  -->
+              <script>
+                // Wait for the DOM to fully load
+                document.addEventListener("DOMContentLoaded", function() {
+                  // Find all links with class "content-link"
+                  const links = document.querySelectorAll(".content-link");
+                  // Add click event listener to each link
+                  links.forEach(function(link) {
+                    link.addEventListener("click", function(event) {
+                      event.preventDefault(); // Prevent default link behavior
+                      const url = this.getAttribute("href"); // Get href attribute of the clicked link
+                      document.getElementById("content-frame").src = 'H:\Innovation Team\Website\Korakot GPS Edition2\Pages\SchoolData.htm'; // Set iframe src to the clicked link's URL
+                    });
+                  });
+                });
+              </script>
+              <div id="content-container">
+                <div id="default-text" style="display: none;">
+                  <!-- Default text content (will be hidden) --> Here will be default text
+                </div>
+                <iframe id="content-frame" src="DefaultPage/index.html" width="100%" height="165%" frameborder="0"></iframe>
+              </div>
+              
+		   </div>
+            <div class="c_b"></div>
+          </div>
+		   
+          <!-- To highlight bottom link -->
+          <style>
+            /* Define the CSS class for the hover effect */
+            .highlight-on-hover {
+              color: black;
+              text-decoration: none;
+              display: inline-block;
+              padding: 2px;
+              border: 1px solid transparent;
+              border-radius: 8px;
+              /* Rounded corners */
+              transition: background-color 0.3s ease;
+              /* Smooth transition for background color */
+            }
+
+            .highlight-on-hover:hover {
+              color: blue;
+              background-color: #F5F5B3;
+              /* Light yellow background color on hover */
+              border: 1px solid blue;
+            }
+          </style>
+          <div style="background-color: #DCDCD2" ; class="down_section  dontPrint">
+            <h3 style="text-align: center; background-color: #0FFF50; padding: 2px;"></h3>
+            <table class="spe_menu">
+              <tr>
+                <td>
+                  <ul>
+                    <li><a href="index.html" class="highlight-on-hover"> &nbsp;&nbsp;Home&nbsp;&nbsp;</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li><a class="highlight-on-hover" href="#" onclick="loadHTML('footer/about.txt')">About</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li><a class="highlight-on-hover" href="#" onclick="loadHTML('footer/index.html')">Contact</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li><a class="highlight-on-hover" href="#" onclick="loadHTML('footer/map.webp')">Map</a></li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="footer_section  dontPrint">
+            <table class="footer">
+              <tr>
+                <td>Copyright © 2024 <a target="_blank" href="DefaultPage/index.html">চাকিনীয়া সপ্রাবি</a>
+                 All Rights Reserved. </td>
+                <td>Powered By <a target="_blank" href="https://ask-ans.com">Abdul Kuddus</a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </center>
+    </body>
+</html>

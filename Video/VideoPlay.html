@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+        .video-player {
+            margin: 20px 0;
+            border: 2px solid #4CAF50;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #fff;
+            display: inline-block;
+            width: 80%;
+            max-width: 800px;
+        }
+        video {
+            width: 100%;
+            outline: none;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .active {
+            background-color: #ff9800;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>প্রাথমিক স্তরের জন্যে কিছু নির্বাচিত ভিডিয়ো</h3>
+
+    <div id="button-container">
+        <button onclick="playVideo('https://www.youtube.com/watch?v=hq3yfQnllfQ')">Phonics Song</button>
+        <button onclick="playVideo('video/video2.mp4', this)">Play Video 2</button>
+        <button onclick="playVideo('video/video3.mp4', this)">Play Video 3</button>
+        <button onclick="playVideo('video/video4.mp4', this)">Play Video 4</button>
+        <button onclick="playVideo('video/video5.mp4', this)">Play Video 5</button>
+        <button onclick="playVideo('video/video6.mp4', this)">Play Video 6</button>
+        <button onclick="playVideo('video/video7.mp4', this)">Play Video 7</button>
+        <button onclick="playVideo('video/video8.mp4', this)">Play Video 8</button>
+        <button onclick="playVideo('video/video9.mp4', this)">Play Video 9</button>
+        <button onclick="playVideo('video/video10.mp4', this)">Play Video 10</button>
+    </div>
+
+    <div id="video-player" class="video-player">
+        <video id="player" controls>
+            <source id="video-source" src="video/video1.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+    </div>
+
+    <script>
+        function playVideo(src, button) {
+            var player = document.getElementById('player');
+            var videoSource = document.getElementById('video-source');
+            var buttons = document.querySelectorAll('button');
+
+            videoSource.src = src;
+            player.load();
+            player.play();
+
+            // Reset the color of all buttons
+            buttons.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+
+            // Set the active color to the clicked button
+            button.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
