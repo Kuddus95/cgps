@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+body {
+  margin: 0;
+  font-family: Verdana, sans-serif, arial black;
+  display: absolute;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #000000;
+  font-size: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 5</div>
+  <img src="image1.jpg" style="width:100%">
+  <div class="text">বিদ্যালয় ভবন</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 5</div>
+  <img src="image2.jpg" style="width:100%">
+  <div class="text"> ওয়াশ রুম</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <img src="image3.jpg" style="width:100%">
+  <div class="text">শহীদ মিনার</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 5</div>
+  <img src="image4.jpg" style="width:100%">
+  <div class="text">প্রাক প্রাথমিক কক্ষ</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 5</div>
+  <img src="image5.jpg" style="width:100%">
+  <div class="text"> দৈনিক সমাবেশ</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>  
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+<br>
+<div style="border:1px dotted black; padding:5px;" > <p style ="font-size:13px; color:blue;">
+চাকিনীয়া সরকারি প্রাথমিক বিদ্যালয় দিনাজপুর জেলার খানসামা উপজেলার ৫ নং ভাবকী ইউনিয়নের চাকিনীয়া গ্রামে অবস্থিত। এটি নব্য সরকারি প্রাথমিক বিদ্যালয়। অর্থাৎ ২০১৩ সালে বিদ্যালয়টি সরকারি হিসেবে জাতীয়করণ করা হয়।<br><br>
+  
+বিদ্যালয়টি প্রতিষ্ঠা হয়েছিল ১৯৭১ সালের স্বাধীনতা যুদ্ধের পরপরই। কিন্তু কমিটির দ্বন্দ, জমিদাতার মনোমালিন্য, প্রধান শিক্ষক পদ নিয়ে জটিলতা ইত্যাদি নানাবিধ কারনে বিদ্যালয়টি কাগজে কলমে প্রতিষ্ঠা লাভ করে ১৯৮৫ সালে। এসময় প্রধান শিক্ষক ছিলেন পুনরঞ্জন ব্রজবাসী।
+বিদ্যালয়টি মোট ৫০ শতাংশ জমির উপর প্রতিষ্ঠিত। জমিদাতা হলেন সাবেক গুলিয়াড়া গ্রামের অধিবাসী জনাব হরিদাস রায় ।<br><br>
+
+বিদ্যালয়টি খুবই দরিদ্র জনগোষ্ঠির শিশুদের পদচারণায় মুখরিত। চারদিকে গাছপালা, দক্ষিন পাশে লিচু বাগান, সামনে বড় খেলার মাঠ, মাঠে বড় বড় আম গাছ - এ নিয়ে বিদ্যালয়ের প্রাকৃতিক পরিবেশ বড়ই মনোরম, সুনিবিড় ছায়া শীতল।<br><br>
+
+বিদ্যালয়টি শিশুদের কোলাহলে পরিপূর্ণ। সুসজ্জিত প্রাক প্রাথমিক কক্ষ, বড় খেলার মাঠ, পর্যাপ্ত খেলার সামগ্রী, সহশিক্ষা কার্যক্রম, প্রতিটি কক্ষে বৈদ্যুতিক ফ্যান, মাল্টিমিডিয়ায় পাঠদান, শতভাগ শিশুদের উপবৃত্তি, সাপ্লাই পানি প্রভৃতি নানাবিধ সুবিধা পেয়ে থাকে শিশুরা।<br><br>
+এছাড়া প্রতি বছর সমাপনীতে ভালো ফলাফল, প্রাথমিক বৃত্তি, এ প্লাস প্রাপ্তি, শিক্ষকদের আন্তরিকতা, পর্যাপ্ত পাঠদান প্রভৃতি কারনে বিদ্যালয়ে শিশু ভর্তি সবসময় বেশি হয়ে থাকে। শুধু চাকিনীয়া গ্রামের শিশুরাই নয়, পার্শ্ববর্তী গ্রাম শুড়িগাঁও, সাবেক গুলিয়াড়া, কৌগাঁও, বৈকুন্ঠপুর থেকে প্রতি বছর বিভিন্ন শ্রেণিতে শিক্ষার্থী ভর্তি হয়ে থাকে। 
+কিন্তু ভবন সংখ্যা মাত্র একটি হওয়ার কারণে শিক্ষক ও শিক্ষার্থী উভয়েরই অনেক কষ্ট সহ্য করতে হচ্ছে।
+</p>
+</div>
+
+</body>
+</html> 

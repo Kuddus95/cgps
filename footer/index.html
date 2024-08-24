@@ -1,0 +1,364 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact Form</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+a{ color:#2D3E52
+
+} label {
+
+display:block;
+
+margin-top:20px;
+
+}
+
+textarea {
+
+width:50%;
+
+height:150px;
+
+background:#efefef;
+
+border:1px solid #dedede;
+
+padding:10px;
+
+margin-top:3px;
+
+font-size:0.9em;
+
+color:#3a3a3a;
+
+-moz-border-radius:5px;
+
+-webkit-border-radius:5px;
+
+border-radius:5px;
+
+}
+
+input,select{
+
+width:50%;
+
+height:25px;
+
+background:#efefef;
+
+border:1px solid #dedede;
+
+padding:10px;
+
+margin-top:3px;
+
+font-size:0.9em;
+
+color:#3a3a3a;
+
+-moz-border-radius:5px;
+
+-webkit-border-radius:5px;
+
+border-radius:5px;
+
+}
+
+input:focus, textarea:focus {
+
+border:1px solid #97d6eb;
+
+}
+
+button {
+
+width:50%;
+
+height:38px;
+
+border:none;
+
+margin-top:20px;
+
+cursor:pointer;
+
+color:white;
+
+background:#335599;
+
+}
+
+button:hover {
+
+opacity:.9;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<center>
+
+ <form class="gform pure-form pure-form-stacked" method="POST" data-email="kuddus95@gmail.com"
+
+  action="https://script.google.com/macros/s/AKfycbxTkcjhn6nVsRm-BkO3NVoJerDBW1L42VnKdr0eZaEqVSxGjTh8Oi2Ieh8CuSUzTCjX/exec">
+
+    <!-- change the form action to your script url -->
+
+    <div class="form-elements">
+
+        <label for="name">Name: </label>
+
+        <input id="name" name="name" placeholder="" />
+
+  
+		<label for="phone"> Phone No: </label>
+        <input id="phone" name="phone" required placeholder="" />
+		
+
+        <label for="email">Email:</label>
+
+        <input id="email" name="email" type="email" value=""
+
+        required placeholder=""/>
+		
+
+        <label for="message">Message: </label>
+
+        <textarea id="message" name="message" rows="5"
+
+        placeholder=""></textarea>
+
+      <button type='submit'>Send</button>
+
+    </div>
+
+    <!-- Customise the Thankyou Message People See when they submit the form: -->
+    <br><br>
+    <div class="thankyou_message" style="display:none;">
+
+
+      <span style='color:green'> Your message sent successfully !</span>
+
+    </div>
+
+  </form>
+
+  <!-- Submit the Form to Google Using "AJAX" -->
+
+  <script>
+
+  (function() {
+
+  // get all data in form and return object
+
+  function getFormData(form) {
+
+    var elements = form.elements;
+
+    var honeypot;
+
+    var fields = Object.keys(elements).filter(function(k) {
+
+      if (elements[k].name === "honeypot") {
+
+        honeypot = elements[k].value;
+
+        return false;
+
+      }
+
+      return true;
+
+    }).map(function(k) {
+
+      if(elements[k].name !== undefined) {
+
+        return elements[k].name;
+
+      // special case for Edge's html collection
+
+      }else if(elements[k].length > 0){
+
+        return elements[k].item(0).name;
+
+      }
+
+    }).filter(function(item, pos, self) {
+
+      return self.indexOf(item) == pos && item;
+
+    });
+
+    var formData = {};
+
+    fields.forEach(function(name){
+
+      var element = elements[name];
+
+      
+
+      // singular form elements just have one value
+
+      formData[name] = element.value;
+
+      // when our element has multiple items, get their values
+
+      if (element.length) {
+
+        var data = [];
+
+        for (var i = 0; i < element.length; i++) {
+
+          var item = element.item(i);
+
+          if (item.checked || item.selected) {
+
+            data.push(item.value);
+
+          }
+
+        }
+
+        formData[name] = data.join(', ');
+
+      }
+
+    });
+
+    // add form-specific values into the data
+
+    formData.formDataNameOrder = JSON.stringify(fields);
+
+    formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
+
+    formData.formGoogleSendEmail
+
+      = form.dataset.email || ""; // no email by default
+
+    return {data: formData, honeypot: honeypot};
+
+  }
+
+  function handleFormSubmit(event) {  
+
+    event.preventDefault();           
+
+    var form = event.target;
+
+    var formData = getFormData(form);
+
+    var data = formData.data;
+
+    // If a honeypot field is filled, assume it was done so by a spam bot.
+
+    if (formData.honeypot) {
+
+      return false;
+
+    }
+
+    disableAllButtons(form);
+
+    var url = form.action;
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.open('POST', url);
+
+    // xhr.withCredentials = true;
+
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    xhr.onreadystatechange = function() {
+
+        if (xhr.readyState === 4 && xhr.status === 200) {
+
+          form.reset();
+
+          var formElements = form.querySelector(".form-elements")
+
+          if (formElements) {
+
+            formElements.style.display = "none"; // hide form
+
+          }
+
+          var thankYouMessage = form.querySelector(".thankyou_message");
+
+          if (thankYouMessage) {
+
+            thankYouMessage.style.display = "block";
+
+          }
+
+        }
+
+    };
+
+    // url encode form data for sending as post data
+
+    var encoded = Object.keys(data).map(function(k) {
+
+        return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+
+    }).join('&');
+
+    xhr.send(encoded);
+
+  }
+
+  
+
+  function loaded() {
+
+    // bind to the submit event of our form
+
+    var forms = document.querySelectorAll("form.gform");
+
+    for (var i = 0; i < forms.length; i++) {
+
+      forms[i].addEventListener("submit", handleFormSubmit, false);
+
+    }
+
+  };
+
+  document.addEventListener("DOMContentLoaded", loaded, false);
+
+  function disableAllButtons(form) {
+
+    var buttons = form.querySelectorAll("button");
+
+    for (var i = 0; i < buttons.length; i++) {
+
+      buttons[i].disabled = true;
+
+    }
+
+  }
+
+})();
+
+  </script>
+
+</center>
+
+</body>
+
+</html>
